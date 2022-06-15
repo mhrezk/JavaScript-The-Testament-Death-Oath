@@ -1,0 +1,73 @@
+#timer {
+  background-color: rgb(158, 149, 27);
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  font-family: "Press Start 2P", cursive;
+  border: 4px solid white;
+}
+
+#result {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  color: rgb(255, 255, 255);
+  font-size: 3em;
+  font-family: "Press Start 2P", cursive;
+}
+
+#enemyHealth {
+  position: absolute;
+  background-color: rgb(4, 219, 219);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+#playerHealth {
+  position: absolute;
+  background-color: rgb(4, 219, 219);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+#interface {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 20px;
+}
+
+#gameCanvas {
+  position: relative;
+  display: inline-block;
+}
+
+#finishMatch {
+  visibility: hidden;
+}
+
+.controls {
+  font-family: "Press Start 2P", cursive;
+}
+
+#playerOne {
+  display: inline-block;
+}
+
+#playerTwo {
+  display: inline-block;
+}

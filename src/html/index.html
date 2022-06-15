@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Death Oath</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Merriweather:wght@300&family=Montserrat+Alternates:wght@500&family=Press+Start+2P&family=Sacramento&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../stylesheet/style.css" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="gameCanvas">
+      <div id="interface">
+        <!-- Player Health -->
+        <div
+          style="
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            border-top: 4px solid white;
+            border-left: 4px solid white;
+            border-bottom: 4px solid white;
+          "
+        >
+          <div
+            style="
+              background-color: rgb(252, 175, 255);
+              height: 30px;
+              width: 100%;
+            "
+          ></div>
+          <div id="playerHealth"></div>
+        </div>
+        <!-- Timer -->
+        <div id="timer"></div>
+        <!-- Enemy Health -->
+        <div
+          style="
+            position: relative;
+            width: 100%;
+            border-top: 4px solid white;
+            border-right: 4px solid white;
+            border-bottom: 4px solid white;
+          "
+        >
+          <div style="background-color: rgb(252, 175, 255); height: 30px"></div>
+          <div id="enemyHealth"></div>
+        </div>
+      </div>
+      <div id="result"></div>
+      <canvas></canvas>
+    </div>
+    <audio controls loop autoplay>
+      <source src="../../assets/audio/Give Me a Break (Sol Badguy theme).mp3" />
+    </audio>
+    <button id="finishMatch" onclick="finishMatch()">Restart</button>
+    <div class="controls">
+      <div id="playerOne">
+        Player 1 Controls
+        <ul>
+          <li>
+            Left Movement:
+            <img
+              src="../../assets/images/static/controls/A Key.PNG"
+              alt="a"
+              width="30"
+            />
+          </li>
+          <li>
+            Right Movement:
+            <img
+              src="../../assets/images/static/controls/D Key.PNG"
+              alt="d"
+              width="30"
+            />
+          </li>
+          <li>
+            Jump:
+            <img
+              src="../../assets/images/static/controls/W Key.PNG"
+              alt="w"
+              width="30"
+            />
+          </li>
+          <li>
+            Attack:
+            <img
+              src="../../assets/images/static/controls/Spacebar.PNG"
+              alt="Spacebar"
+              width="200"
+            />
+          </li>
+        </ul>
+      </div>
+      <div id="playerTwo">
+        Player 2 Controls
+        <ul>
+          <li>
+            Left Movement:
+            <img
+              src="../../assets/images/static/controls/Left Arrow Key.PNG"
+              alt="left"
+              width="30"
+            />
+          </li>
+          <li>
+            Right Movement:
+            <img
+              src="../../assets/images/static/controls/Right Arrow Key.PNG"
+              alt="left"
+              width="30"
+            />
+          </li>
+          <li>
+            Jump:
+            <img
+              src="../../assets/images/static/controls/Up Arrow Key.PNG"
+              alt="left"
+              width="30"
+            />
+          </li>
+          <li>
+            Attack:
+            <img
+              src="../../assets/images/static/controls/Enter Key.PNG"
+              alt="left"
+              width="100"
+            />
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- GSAP Importation -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
+      integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="../javascript/classes.js"></script>
+    <script src="../javascript/utilities.js"></script>
+    <script src="../javascript/index.js"></script>
+  </body>
+</html>
